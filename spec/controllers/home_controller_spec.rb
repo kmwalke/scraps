@@ -5,7 +5,7 @@ RSpec.describe HomeController, type: :controller do
     it 'populates an array of contacts'
     it 'renders the :index view' do
       get :index
-      response.should render_template :index
+      expect(response).to render_template :index
     end
   end
 end
