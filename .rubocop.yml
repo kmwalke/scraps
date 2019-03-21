@@ -1,0 +1,38 @@
+AllCops:
+  Exclude:
+  - 'db/schema.rb'
+  - 'db/migrate/*acts_as_taggable*'
+  - 'config/environments/*'
+  - 'bin/*'
+
+Layout/ExtraSpacing:
+  ForceEqualSignAlignment: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/BlockLength:
+  Exclude:
+  - 'spec/requests/*'
+  - 'Guardfile'
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
