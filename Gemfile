@@ -17,6 +17,7 @@ gem 'turbolinks', '~> 5'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails'
   gem 'capybara'
 end
 
@@ -34,13 +35,13 @@ end
 
 group :test do
   gem 'database_cleaner'
-  gem 'factory_bot_rails'
   gem 'faker'
   gem 'rubocop-rspec'
   # Adds support for Capybara system testing and selenium driver
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
