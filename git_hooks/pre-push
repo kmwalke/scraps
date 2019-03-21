@@ -1,0 +1,36 @@
+#!/bin/sh
+
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+NC='\033[0m'
+
+# Check if rubocop is installed for the current project
+bin/bundle exec rubocop -v >/dev/null 2>&1 || { echo >&2 "${red}[Pre Push][Fatal]: Add rubocop to your Gemfile"; exit 1; }
+bin/bundle exec rspec -v >/dev/null 2>&1 || { echo >&2 "${red}[Pre Push][Fatal]: Add rspec to your Gemfile"; exit 1; }
+
+echo "${green}[Pre Push][Info]: Checking Ruby Style${NC}"
+
+if [ ! -f '.rubocop.yml' ]; then
+  echo "${yellow}[Pre Push][Warning]: No .rubocop.yml config file.${NC}"
+fi
+
+# Run rubocop
+bundle exec rubocop
+
+if [ $? -ne 0 ]; then
+  echo "${red}[Pre Push][Error]: Fix the issues and commit again${NC}"
+  exit 1
+fi
+
+echo "${green}[Pre Push][Info]: Running Tests${NC}"
+
+# Run tests
+bundle exec rspec
+
+if [ $? -ne 0 ]; then
+  echo "${red}[Pre Push][Error]: Fix the issues and commit again${NC}"
+  exit 1
+fi
+
+exit 0
