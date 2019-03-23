@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe HomeController, type: :controller do
+RSpec.describe GetInvolvedController, type: :controller do
   describe 'GET #index' do
     it 'renders the :index view' do
       get :index
