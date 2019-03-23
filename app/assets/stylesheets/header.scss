@@ -1,3 +1,4 @@
+$header-bg-color: white;
 $header-link-color: blue;
 $header-link-bg-color: white;
 $header-active-link-color: green;
@@ -16,6 +17,10 @@ $header-active-link-bg-color: #ddd;
 div.header {
   width: 100%;
   border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $header-bg-color;
 
   img {
     display: inline-block;
