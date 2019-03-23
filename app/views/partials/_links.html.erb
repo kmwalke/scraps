@@ -4,17 +4,17 @@
   <li><%= link_to 'Story', story_path, id: :story %></li>
   <li><%= link_to 'Get Involved', get_involved_path, id: :get_involved %></li>
   <ul>
-    <li>Volunteer for a program</li>
-    <li>Donate</li>
+    <li><%= link_to 'Volunteer', volunteer_path, id: :volunteer %></li>
+    <li><%= link_to 'Donate', donate_path, id: :donate %></li>
   </ul>
   <li><%= link_to 'Programs', programs_path, id: :programs %></li>
   <ul>
-    <li>Pumpkin Smash</li>
+    <li><%= link_to 'Pumpkin Smash', pumpkin_smash_path, id: :pumpkin_smash %></li>
     <ul>
       <li>Link to tickets</li>
       <li>Sponsorship forms</li>
     </ul>
-    <li>Garden</li>
+    <li><%= link_to 'Garden', garden_path, id: :garden %></li>
     <ul>
       <li>Apply to be a gardener
         - Display map of plots, they can select the plot

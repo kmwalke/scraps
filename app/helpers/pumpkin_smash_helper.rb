@@ -1,0 +1,2 @@
+module PumpkinSmashHelper
+end
