@@ -1,4 +1,3 @@
 class GetInvolvedController < ApplicationController
-  def index
-  end
+  def index; end
 end
