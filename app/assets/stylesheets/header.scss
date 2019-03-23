@@ -1,0 +1,112 @@
+$header-link-color: blue;
+$header-link-bg-color: white;
+$header-active-link-color: green;
+$header-active-link-bg-color: #ddd;
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 100%;}
+}
+
+@keyframes disappear {
+  from {opacity: 100%;}
+  to {opacity: 0;}
+}
+
+div.header {
+  width: 100%;
+  border-bottom: 1px solid black;
+
+  img {
+    display: inline-block;
+    width: 10%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  div.nav_links {
+    display: inline-block;
+    width: 89%;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      width: 100%;
+
+      li {
+        display: inline-block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        a {
+          display: inline-block;
+          font-size: x-large;
+          border-right: 1px solid $header-active-link-bg-color;
+          padding: .5em 1em;
+          margin: 0;
+        }
+
+        a, a:visited, a:active {
+          text-decoration: none;
+          color: $header-link-color;
+          background-color: $header-link-bg-color;
+        }
+
+        a.active {
+          text-decoration: underline;
+          color: $header-active-link-color;
+          background-color: $header-active-link-bg-color;
+        }
+
+        ul.submenu {
+          display: none;
+          animation-name: disappear;
+          animation-duration: .5s;
+        }
+      }
+
+      li:last-of-type a {
+        border-right: none;
+      }
+
+      li:hover {
+
+        a {
+          color: lighten($header-active-link-color, 10%);
+          background-color: lighten($header-active-link-bg-color, 10%);
+        }
+
+        ul.submenu {
+          display: block;
+          position: absolute;
+          top: 3em;
+          animation-name: appear;
+          animation-duration: .5s;
+
+          li {
+            height: 3em;
+            width: 120%;
+
+            a, a:visited, a:active {
+              margin-bottom:1px;
+              width: 100%;
+              border-right: none;
+              border-bottom: 1px solid $header-active-link-bg-color;
+              border-top: 1px solid $header-active-link-bg-color;
+              text-decoration: none;
+              color: $header-link-color;
+              background-color: $header-link-bg-color;
+            }
+
+            a:hover {
+              color: lighten($header-active-link-color, 10%);
+              background-color: lighten($header-active-link-bg-color, 10%);
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
