@@ -3,6 +3,8 @@ $header-link-color: blue;
 $header-link-bg-color: white;
 $header-active-link-color: green;
 $header-active-link-bg-color: #ddd;
+$header-hover-link-color: lighten($header-active-link-color, 10%);
+$header-hover-link-bg-color: lighten($header-active-link-bg-color, 10%);
 
 @keyframes appear {
   from {opacity: 0;}
@@ -79,8 +81,8 @@ div.header {
       li:hover {
 
         a {
-          color: lighten($header-active-link-color, 10%);
-          background-color: lighten($header-active-link-bg-color, 10%);
+          color: $header-hover-link-color;
+          background-color: $header-hover-link-bg-color;
         }
 
         ul.submenu {
@@ -106,8 +108,8 @@ div.header {
             }
 
             a:hover {
-              color: lighten($header-active-link-color, 10%);
-              background-color: lighten($header-active-link-bg-color, 10%);
+              color: $header-hover-link-color;
+              background-color: $header-hover-link-bg-color;
             }
 
           }
