@@ -1,9 +1,36 @@
+$content-width: 60%;
+$content-bg-color: tan;
+
 html, body {
   padding: 0;
   margin: 0;
+  position: relative;
 
   div.content {
-    padding: 0 5%;
+    padding: 0 0;
     margin-top: 14em;
+    position: absolute;
+    width: $content-width;
+    left: 50%;
+    margin-left: (-1 * $content-width /2);
+
+    div.content-bubble {
+      background: $content-bg-color;
+      margin-top: 5em;
+      padding: 1em;
+
+      fieldset {
+        position: relative;
+        border: 0;
+
+        legend {
+          position: absolute;
+          top: -1.25em;
+          font-size: x-large;
+          font-weight: bold;
+          background-color: lighten($content-bg-color, 20%);
+        }
+      }
+    }
   }
 }

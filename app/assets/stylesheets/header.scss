@@ -24,17 +24,18 @@ div.header {
   left: 0;
   background: $header-bg-color;
   padding-bottom: 1px;
+  z-index: 100;
 
-  img {
+  img.logo {
     display: inline-block;
-    width: 10%;
-    height: auto;
+    width: auto;
+    height: 8em;
     vertical-align: middle;
   }
 
   div.nav_links {
+    margin-left: 2em;
     display: inline-block;
-    width: 89%;
 
     ul {
       list-style-type: none;
