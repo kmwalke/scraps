@@ -1,117 +1,150 @@
 <%= render partial: 'partials/title', locals: {title: 'Pumpkin Smash'} %>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      What is the Pumpkin Smash?
-    </legend>
-    <p>
-      Scraps-to-Soil holds the Pumpkin SMASH each year to explore composting and ways to contribute less to the waste
-      stream. We get “hands-on” with tons of techniques for pulverizing pumpkins into pieces, including the Gallagher
-      mallets, Louisville Sluggers, the Trebuchet launcher and the SlingShot. No matter the smash technique you choose,
-      you will contribute to the continuance of a community-wide composting crusade.
-    </p>
-    <p>
-      The next Pumpkin SMASH is the 11th annual and is going to be on Saturday, November 2nd from 12 to 4pm at the Idaho
-      Springs Ball fields. We will have the smashing stations, food vendors, beer & rootbeer, informational booths,
-      Pumpkin Pinata, Pumpkin bowling, Obstacle Course, Bouncy house, Chicken POO Bingo, Lucky Bucket raffle and face
-      painting!
-    </p>
-    <p>
-      The event will happen rain, shine or snow so come prepared for a November kind of day in the Rocky Mountains. Tell
-      your friends and family... DON'T TRASH IT, SMASH IT!! SEE YOU THERE!
-    </p>
-    <p>
-      The Pumpkin SMASH is brought to you by Scraps-to-Soil, an ALL volunteer non profit, local partners, sponsors and donors.
-    </p>
-  </fieldset>
-</div>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      Get Tickets
-    </legend>
-    <p>
-      The event is FREE to attend and all ages are welcome. GET YOUR FREE TICKETS AT EVENTBRITE.COM To participate in
-      each station you will need 1 ticket or 1 "SMASH cash". Each ticket is $1, but don't let money put a stop to a
-      great time, you can also earn "SMASH cash" when you learn about composting and other ways to live more sustainably
-      while having fun! Here is how: Walk around the event and read the posters with information about composting and
-      recycling, then visit the "SMASH cash station" and answer some questions, if you get them right, you will earn
-      "SMASH cash" and can spend it having more fun!
-    </p>
-  </fieldset>
-</div>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      Be a Sponsor
-    </legend>
-    <p>Letter + Levels + Ask for contact info or give contact info?</p>
-    <ul>
-      <li>
-        2018 GOLD SPONSORS: BeauJos, Frozen Fire & City of Idaho Springs
-      </li>
-      <li>
-        2018 SILVER SPONSORS: Tommy Knocker Brewery, Smokin Yards BBQ, Westbound&down Brewery, Idaho Springs Chamber of
-        Commerce.
-      </li>
-      <li>
-        2018 BRONZE SPONSORS: SOLVE, Echo Mountain Resort, Coopers on the Creek, The Alpine Restaurant, The Happy
-        Cooker.
-      </li>
-      <li>
-        2018 PARTNERS: Clear Creek Metropilitan Recreation District, Mountain Youth Network, A.D.D. Productions, Rite of
-        Passage, Clear Creek CSU Extension, Clear Creek Fire Authority, Mill Creek Designs, Clear Creek Library
-        District, I Know a Guy, Green Way LLC, Allied Towing, Boy Scouts, Clear Creek Eco School, Main Street
-        Restaurant, The Frothy Cup & Idaho Springs Public works.
-      </li>
-    </ul>
-  </fieldset>
-</div>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      Be a Smash Partner
-    </legend>
-    <p>
-      What it means to be a partner + Partner opportunities + Ask for contact info or give contact info?
-    </p>
-  </fieldset>
-</div>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      Be a Donor
-    </legend>
-    <p>
-      Ask for contact info or give contact info?
-    </p>
-  </fieldset>
-</div>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      Be a Volunteer
-    </legend>
-    <p>
-      Link to Get involved/volunteer, right?
-    </p>
-  </fieldset>
-</div>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      Food Vendors
-    </legend>
-    <p>
-    </p>
-  </fieldset>
-</div>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      Exhibit Booths
-    </legend>
-    <p>
-    </p>
-  </fieldset>
+<div class="content-bubble-wrapper">
+  <div class="content-bubble">
+    <div class="half left">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+    <div class="half right highlight">
+      <h2>
+        What is the Pumpkin Smash?
+      </h2>
+      <p>
+        Scraps-to-Soil holds the Pumpkin SMASH each year to explore composting and ways to contribute less to the waste
+        stream. We get “hands-on” with tons of techniques for pulverizing pumpkins into pieces, including the Gallagher
+        mallets, Louisville Sluggers, the Trebuchet launcher and the SlingShot. No matter the smash technique you
+        choose,
+        you will contribute to the continuance of a community-wide composting crusade.
+      </p>
+      <p>
+        The next Pumpkin SMASH is the 11th annual and is going to be on Saturday, November 2nd from 12 to 4pm at the
+        Idaho
+        Springs Ball fields. We will have the smashing stations, food vendors, beer & rootbeer, informational booths,
+        Pumpkin Pinata, Pumpkin bowling, Obstacle Course, Bouncy house, Chicken POO Bingo, Lucky Bucket raffle and face
+        painting!
+      </p>
+      <p>
+        The event will happen rain, shine or snow so come prepared for a November kind of day in the Rocky Mountains.
+        Tell
+        your friends and family... DON'T TRASH IT, SMASH IT!! SEE YOU THERE!
+      </p>
+      <p>
+        The Pumpkin SMASH is brought to you by Scraps-to-Soil, an ALL volunteer non profit, local partners, sponsors and
+        donors.
+      </p>
+    </div>
+  </div>
+  <div class="content-bubble">
+    <div class="half left highlight">
+      <h2>
+        Get Tickets
+      </h2>
+      <p>
+        The event is FREE to attend and all ages are welcome. GET YOUR FREE TICKETS AT EVENTBRITE.COM To participate in
+        each station you will need 1 ticket or 1 "SMASH cash". Each ticket is $1, but don't let money put a stop to a
+        great time, you can also earn "SMASH cash" when you learn about composting and other ways to live more
+        sustainably
+        while having fun! Here is how: Walk around the event and read the posters with information about composting and
+        recycling, then visit the "SMASH cash station" and answer some questions, if you get them right, you will earn
+        "SMASH cash" and can spend it having more fun!
+      </p>
+    </div>
+    <div class="half right">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+  </div>
+  <div class="content-bubble">
+    <div class="half left">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+    <div class="half right">
+      <h2>
+        Be a Sponsor
+      </h2>
+      <p>Letter + Levels + Ask for contact info or give contact info?</p>
+      <ul>
+        <li>
+          2018 GOLD SPONSORS: BeauJos, Frozen Fire & City of Idaho Springs
+        </li>
+        <li>
+          2018 SILVER SPONSORS: Tommy Knocker Brewery, Smokin Yards BBQ, Westbound&down Brewery, Idaho Springs Chamber
+          of
+          Commerce.
+        </li>
+        <li>
+          2018 BRONZE SPONSORS: SOLVE, Echo Mountain Resort, Coopers on the Creek, The Alpine Restaurant, The Happy
+          Cooker.
+        </li>
+        <li>
+          2018 PARTNERS: Clear Creek Metropilitan Recreation District, Mountain Youth Network, A.D.D. Productions, Rite
+          of
+          Passage, Clear Creek CSU Extension, Clear Creek Fire Authority, Mill Creek Designs, Clear Creek Library
+          District, I Know a Guy, Green Way LLC, Allied Towing, Boy Scouts, Clear Creek Eco School, Main Street
+          Restaurant, The Frothy Cup & Idaho Springs Public works.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="content-bubble">
+    <div class="half left">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+    <div class="half right">
+      <h2>
+        Be a Smash Partner
+      </h2>
+      <p>
+        What it means to be a partner + Partner opportunities + Ask for contact info or give contact info?
+      </p>
+    </div>
+  </div>
+  <div class="content-bubble">
+    <div class="half left">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+    <div class="half right">
+      <h2>
+        Be a Donor
+      </h2>
+      <p>
+        Ask for contact info or give contact info?
+      </p>
+    </div>
+  </div>
+  <div class="content-bubble">
+    <div class="half left">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+    <div class="half right">
+      <h2>
+        Be a Volunteer
+      </h2>
+      <p>
+        Link to Get involved/volunteer, right?
+      </p>
+    </div>
+  </div>
+  <div class="content-bubble">
+    <div class="half left">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+    <div class="half right">
+      <h2>
+        Food Vendors
+      </h2>
+      <p>
+      </p>
+    </div>
+  </div>
+  <div class="content-bubble">
+    <div class="half left">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+    <div class="half right">
+      <h2>
+        Exhibit Booths
+      </h2>
+      <p>
+      </p>
+    </div>
+  </div>
 </div>

@@ -1,48 +1,65 @@
 <%= render partial: 'partials/title', locals: {title: 'Story'} %>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      Title
-    </legend>
-    <p>
-      Scraps-to-Soil is an all-volunteer nonprofit that was founded in 2010. Our goal is to develop a synergistic set of
-      programs that increase access to sustainable and healthy lifestyle options to residents of our communities. This
-      includes constructing and operating community gardens, supporting home gardening and composting efforts, promoting
-      a community composting program as well as events, workshops and educational programs to give residents the
-      inspiration and skillset to pursue these lifestyle options. The organization has always been light on funding but
-      heavy on volunteerism and enthusiasm.
-    </p>
-  </fieldset>
-</div>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      Ask a question?
-    </legend>
-    <p>
-      The Idaho Springs Community Garden was opened to the public in the spring of 2011. We had transformed an unused
-      plot of land in the middle of town to a vibrant community space. For the next six years residents were able to
-      rent plots, recreate, grow food, learn to adapt their diets to seasonal availability and get to know their
-      neighbors in a disarming setting. The garden was a source of pride and inspiration to many in the community during
-      that time. The number of home gardens in the community increased as well as interest in the pursuit of healthy
-      lifestyles. In 2016 the garden was deconstructed to due to road realignment in the area. It was identified as the
-      most popular amenity in the area during community inputs meeting held by the city. The reconstruction of the
-      community garden will be a symbol of resilience and dedication to the mission of achieving healthy, active and
-      sustainable lifestyles in our community.
-    </p>
-  </fieldset>
-</div>
-<div class="content-bubble">
-  <fieldset>
-    <legend>
-      Ask a question?
-    </legend>
-    <p>
-      Our other programs have helped to support and enhance the impact of the Garden and our mission. The annual Pumpkin
-      Smash is a great example of this synergy. People are invited to smash their jack-o-lanterns using a variety of
-      contraptions and methods. The pumpkins are then taken to be composted. The event is marketed as a fun outdoor
-      activity and is designed to educate participants on composting, sustainability and healthy lifestyles as they
-      recreate.
-    </p>
-  </fieldset>
+<div class="content-bubble-wrapper">
+  <div class="content-bubble">
+    <div class="half left">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+    <div class="half right highlight">
+      <h2>
+        Title
+      </h2>
+      <p>
+        Scraps-to-Soil is an all-volunteer nonprofit that was founded in 2010. Our goal is to develop a synergistic set
+        of
+        programs that increase access to sustainable and healthy lifestyle options to residents of our communities. This
+        includes constructing and operating community gardens, supporting home gardening and composting efforts,
+        promoting
+        a community composting program as well as events, workshops and educational programs to give residents the
+        inspiration and skillset to pursue these lifestyle options. The organization has always been light on funding
+        but
+        heavy on volunteerism and enthusiasm.
+      </p>
+    </div>
+  </div>
+  <div class="content-bubble">
+    <div class="half left">
+      <h2>
+        Ask a question?
+      </h2>
+      <p>
+        The Idaho Springs Community Garden was opened to the public in the spring of 2011. We had transformed an unused
+        plot of land in the middle of town to a vibrant community space. For the next six years residents were able to
+        rent plots, recreate, grow food, learn to adapt their diets to seasonal availability and get to know their
+        neighbors in a disarming setting. The garden was a source of pride and inspiration to many in the community
+        during
+        that time. The number of home gardens in the community increased as well as interest in the pursuit of healthy
+        lifestyles. In 2016 the garden was deconstructed to due to road realignment in the area. It was identified as
+        the
+        most popular amenity in the area during community inputs meeting held by the city. The reconstruction of the
+        community garden will be a symbol of resilience and dedication to the mission of achieving healthy, active and
+        sustainable lifestyles in our community.
+      </p>
+    </div>
+    <div class="half right">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+  </div>
+  <div class="content-bubble">
+    <div class="half left">
+      <%= image_tag 'boy_gardening.jpeg' %>
+    </div>
+    <div class="half right">
+      <h2>
+        Ask a question?
+      </h2>
+      <p>
+        Our other programs have helped to support and enhance the impact of the Garden and our mission. The annual
+        Pumpkin
+        Smash is a great example of this synergy. People are invited to smash their jack-o-lanterns using a variety of
+        contraptions and methods. The pumpkins are then taken to be composted. The event is marketed as a fun outdoor
+        activity and is designed to educate participants on composting, sustainability and healthy lifestyles as they
+        recreate.
+      </p>
+    </div>
+  </div>
 </div>
