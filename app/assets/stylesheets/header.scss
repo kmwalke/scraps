@@ -30,6 +30,17 @@ $logo-bg-color: $color_secondary;
   }
 }
 
+@keyframes active-highlight {
+  from {
+    color: $header-active-link-color;
+    background-color: $header-link-bg-color;
+  }
+  to {
+    color: $header-hover-link-color;
+    background-color: $header-hover-link-bg-color;
+  }
+}
+
 @keyframes lowlight {
   from {
     color: $header-hover-link-color;
@@ -122,6 +133,11 @@ div.header {
           animation-duration: .5s;
           color: $header-hover-link-color;
           background-color: $header-hover-link-bg-color;
+        }
+
+        a.active {
+          animation-name: active-highlight;
+          animation-duration: .5s;
         }
 
         ul.submenu {
