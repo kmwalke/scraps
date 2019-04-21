@@ -1,25 +1,67 @@
 @import '_gloabal_variables';
 
-$site-bg_color: $color_secondary_light_1;
+$site-bg-color: $color_secondary_light_1;
+$title-color: $color_secondary_light_1;
+$title-shadow-color: $color_tertiary_dark_1;
 $content-width: 60%;
-$content-bg-color: tan;
+$content-bg-color: $color_secondary_light_2;
 
 html, body {
   padding: 0;
   margin: 0;
   position: relative;
-  background-color: $site-bg_color;
+  background-color: $site-bg-color;
   font-family: 'Lato', sans-serif;
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
   div.content {
     padding: 0 0;
-    margin-top: 14em;
+    margin-top: 6em;
     position: absolute;
-    width: $content-width;
-    left: 50%;
-    margin-left: (-1 * $content-width /2);
+    width: 100%;
+
+    img.splash {
+      width: 100%;
+    }
+
+    div.title {
+      position: absolute;
+      width: 100%;
+      top: 10em;
+      text-align: center;
+
+      h1 {
+        font-family: 'Merienda', cursive;
+        color: $title-color;
+        text-shadow: 3px 3px $title-shadow-color;
+        font-size: 6em;
+      }
+    }
 
     div.content-bubble {
+      //width: $content-width;
+      //left: 50%;
+      //margin-left: (-1 * $content-width /2);
       background: $content-bg-color;
       margin-top: 5em;
       padding: 1em;
