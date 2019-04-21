@@ -1,10 +1,13 @@
-$header-bg-color: white;
-$header-link-color: blue;
-$header-link-bg-color: white;
-$header-active-link-color: green;
-$header-active-link-bg-color: #ddd;
+@import '_gloabal_variables';
+
+$header-bg-color: $color_primary;
+$header-link-color: $color_secondary_light_2;
+$header-link-bg-color: $color_primary;
+$header-active-link-color: $color_secondary_light_1;
+$header-active-link-bg-color: $color_primary;
 $header-hover-link-color: lighten($header-active-link-color, 10%);
-$header-hover-link-bg-color: lighten($header-active-link-bg-color, 10%);
+$header-hover-link-bg-color: $header-active-link-bg-color;
+$logo-bg-color: $color_secondary;
 
 @keyframes appear {
   from {opacity: 0;}
@@ -16,25 +19,49 @@ $header-hover-link-bg-color: lighten($header-active-link-bg-color, 10%);
   to {opacity: 0;}
 }
 
+@keyframes highlight {
+  from {
+    color: $header-link-color;
+    background-color: $header-link-bg-color;
+  }
+  to {
+    color: $header-hover-link-color;
+    background-color: $header-hover-link-bg-color;
+  }
+}
+
+@keyframes lowlight {
+  from {
+    color: $header-hover-link-color;
+    background-color: $header-hover-link-bg-color;
+  }
+  to {
+    color: $header-link-color;
+    background-color: $header-link-bg-color;
+  }
+}
+
 div.header {
   width: 100%;
-  border-bottom: 1px solid black;
   position: fixed;
   top: 0;
   left: 0;
   background: $header-bg-color;
   padding-bottom: 1px;
   z-index: 100;
+  text-align: center;
+  height: 6em;
 
   img.logo {
     display: inline-block;
     width: auto;
-    height: 8em;
-    vertical-align: middle;
+    height: 10em;
+    vertical-align: top;
+    background-color: $logo-bg-color;
   }
 
   div.nav_links {
-    margin-left: 2em;
+    margin: 0.3em 2em 0 2em;
     display: inline-block;
 
     ul {
@@ -63,7 +90,7 @@ div.header {
         }
 
         a.active {
-          text-decoration: underline;
+          border-bottom: 2px solid $header-active-link-color;
           color: $header-active-link-color;
           background-color: $header-active-link-bg-color;
         }
@@ -79,9 +106,18 @@ div.header {
         border-right: none;
       }
 
+      li:not(:hover) {
+        a {
+          animation-name: lowlight;
+          animation-duration: .5s;
+        }
+      }
+
       li:hover {
 
         a {
+          animation-name: highlight;
+          animation-duration: .5s;
           color: $header-hover-link-color;
           background-color: $header-hover-link-bg-color;
         }
@@ -90,6 +126,8 @@ div.header {
           display: block;
           position: absolute;
           top: 3em;
+          padding-top: 1.75em;
+          background-color: $header-link-bg-color;
           animation-name: appear;
           animation-duration: .5s;
 
@@ -98,19 +136,19 @@ div.header {
             width: 120%;
 
             a, a:visited, a:active {
+              animation-name: none;
               margin-bottom:1px;
               width: 100%;
               border-right: none;
-              border-bottom: 1px solid $header-active-link-bg-color;
-              border-top: 1px solid $header-active-link-bg-color;
               text-decoration: none;
-              color: $header-link-color;
-              background-color: $header-link-bg-color;
+              color: darken($header-link-color, 20%);
+              background-color: lighten($header-link-bg-color, 60%);
+              border-top: 1px solid lighten($header-link-color, 10%);
             }
 
             a:hover {
-              color: $header-hover-link-color;
-              background-color: $header-hover-link-bg-color;
+              color: darken($header-link-color, 30%);
+              background-color: lighten($header-link-bg-color, 50%);
             }
 
           }

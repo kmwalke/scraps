@@ -1,4 +1,41 @@
 <div class="header">
-  <%= image_tag 'logo.jpg', class: :logo %>
-  <%= render 'partials/links' %>
+  <div class="nav_links">
+    <ul>
+      <li>
+        <%= link_to 'Home', root_path, id: :home, class: active_link?(root_path) %>
+      </li>
+      <li>
+        <%= link_to 'Get Involved', get_involved_path, id: :get_involved, class: active_link?(get_involved_path) || active_link?(volunteer_path) || active_link?(donate_path) %>
+        <ul class="submenu">
+          <li>
+            <%= link_to 'Volunteer', volunteer_path, id: :volunteer %>
+          </li>
+          <li>
+            <%= link_to 'Donate', donate_path, id: :donate %>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <%= image_tag 'logo_green.png', class: :logo %>
+  <div class="nav_links">
+    <ul>
+      <li>
+        <%= link_to 'About', about_path, id: :about, class: active_link?(about_path) %>
+      </li>
+      <li>
+        <%= link_to 'Story', story_path, id: :story, class: active_link?(story_path) %>
+      </li>
+      <li>
+        <%= link_to 'Programs', programs_path, id: :programs, class: active_link?(programs_path) || active_link?(pumpkin_smash_path) || active_link?(garden_path) %>
+        <ul class="submenu">
+          <li>
+            <%= link_to 'Pumpkin Smash', pumpkin_smash_path, id: :pumpkin_smash %>
+          </li>
+          <li>
+            <%= link_to 'Garden', garden_path, id: :garden %></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>

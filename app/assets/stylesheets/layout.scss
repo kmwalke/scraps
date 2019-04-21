@@ -1,3 +1,6 @@
+@import '_gloabal_variables';
+
+$site-bg_color: $color_secondary_light_1;
 $content-width: 60%;
 $content-bg-color: tan;
 
@@ -5,6 +8,8 @@ html, body {
   padding: 0;
   margin: 0;
   position: relative;
+  background-color: $site-bg_color;
+  font-family: 'Lato', sans-serif;
 
   div.content {
     padding: 0 0;
