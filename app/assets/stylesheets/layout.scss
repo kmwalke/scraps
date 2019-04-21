@@ -10,6 +10,7 @@ $div-border-color: $color_secondary_dark_2;
 html, body {
   padding: 0;
   margin: 0;
+  height: 100%;
   background-color: $site-bg-color;
   background-image: image-url('content_bg.jpg');
   font-family: 'Raleway', serif;
@@ -61,9 +62,7 @@ html, body {
 
     div.content-bubble-wrapper {
       width: $content-width;
-      left: 50%;
-      position: absolute;
-      margin-left: (-1 * $content-width /2);
+      margin-left: (100% - $content-width) / 2;
 
       div.content-bubble {
         margin-top: 5em;
@@ -112,11 +111,6 @@ html, body {
           margin-right: 2.5%;
         }
       }
-    }
-
-    div.footer {
-      position: absolute;
-      bottom: 0;
     }
   }
 }
