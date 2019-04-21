@@ -4,14 +4,15 @@ $site-bg-color: $color_secondary_light_1;
 $title-color: $color_secondary_light_1;
 $title-shadow-color: $color_tertiary_dark_1;
 $content-width: 60%;
-$content-bg-color: $color_secondary_light_2;
+$div-bg-color: $color_secondary_light_1;
+$div-border-color: $color_secondary_dark_2;
 
 html, body {
   padding: 0;
   margin: 0;
-  position: relative;
   background-color: $site-bg-color;
-  font-family: 'Lato', sans-serif;
+  background-image: url('content_bg.jpg');
+  font-family: 'Raleway', serif;
 
   /* width */
   ::-webkit-scrollbar {
@@ -37,8 +38,8 @@ html, body {
   div.content {
     padding: 0 0;
     margin-top: 6em;
-    position: absolute;
     width: 100%;
+    position: relative;
 
     img.splash {
       width: 100%;
@@ -58,26 +59,63 @@ html, body {
       }
     }
 
-    div.content-bubble {
-      //width: $content-width;
-      //left: 50%;
-      //margin-left: (-1 * $content-width /2);
-      background: $content-bg-color;
-      margin-top: 5em;
-      padding: 1em;
+    div.content-bubble-wrapper {
+      width: $content-width;
+      left: 50%;
+      position: absolute;
+      margin-left: (-1 * $content-width /2);
 
-      fieldset {
-        position: relative;
-        border: 0;
+      div.content-bubble {
+        margin-top: 5em;
+        display: flex;
 
-        legend {
-          position: absolute;
-          top: -1.25em;
-          font-size: x-large;
-          font-weight: bold;
-          background-color: lighten($content-bg-color, 20%);
+        img {
+          display: inline-block;
+          vertical-align: top;
+          width: 100%;
+          height: auto;
+        }
+
+        div {
+          display: inline-block;
+          padding: 1em;
+          font-family: 'Raleway', serif;
+
+          h1 {
+            font-family: 'Arvo', serif;
+          }
+        }
+
+        div.highlight {
+          background: $div-bg-color;
+          border: 1px solid $div-border-color;
+        }
+
+        .one_third {
+          width: 30%;
+        }
+
+        .two_thirds {
+          width: 63%;
+        }
+
+        .half {
+          width: 45%;
+        }
+
+        .right {
+          margin-left: 2.5%;
+        }
+
+        .left {
+          margin-right: 2.5%;
         }
       }
+    }
+
+    div.footer {
+      position: absolute;
+      bottom: 0;
     }
   }
 }
