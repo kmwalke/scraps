@@ -1,11 +1,11 @@
 @import '_global_variables';
 
-$site-bg-color: $color_gray_light_2;
-$title-color: $color_secondary_light_1;
-$title-shadow-color: $color_tertiary_dark_1;
+$site-bg-color: $color_gray_lighter;
+$title-color: $color_secondary_lighter;
+$title-shadow-color: $color_tertiary_dark;
 $content-width: 60%;
-$div-bg-color: $color_secondary_light_1;
-$div-border-color: $color_secondary_dark_2;
+$div-bg-color: $color_secondary_lighter;
+$div-border-color: $color_secondary_darker;
 
 html, body {
   padding: 0;

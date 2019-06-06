@@ -1,9 +1,9 @@
 @import '_global_variables';
 
 $header-bg-color: $color_primary;
-$header-link-color: $color_secondary_light_2;
+$header-link-color: $color_secondary_light;
 $header-link-bg-color: $color_primary;
-$header-active-link-color: $color_secondary_light_1;
+$header-active-link-color: $color_secondary_lighter;
 $header-active-link-bg-color: $color_primary;
 $header-hover-link-color: lighten($header-active-link-color, 10%);
 $header-hover-link-bg-color: $header-active-link-bg-color;

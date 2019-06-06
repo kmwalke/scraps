@@ -42,12 +42,12 @@ div.footer {
     }
 
     a, a:visited, a:active {
-      color: $color_secondary_light_2;
+      color: $color_secondary_light;
       width: auto;
     }
 
     a:hover {
-      color: $color_secondary_light_1;
+      color: $color_secondary_lighter;
       text-decoration: none;
     }
   }
@@ -72,7 +72,7 @@ div.footer {
     line-height: $footer_2_height/2;
 
     div.background {
-      background-color: $color_tertiary_dark_1;
+      background-color: $color_tertiary_dark;
       height: $footer_2_height;
     }
   }
@@ -83,7 +83,7 @@ div.footer {
 
     div.background {
       height: $footer_3_height;
-      background-color: $color_tertiary_dark_2;
+      background-color: $color_tertiary_darker;
     }
   }
 }
