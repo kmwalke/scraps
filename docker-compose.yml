@@ -1,0 +1,31 @@
+version: '3.4'
+
+services:
+  scraps:
+    build: .
+    command: script/start-dev.sh
+    volumes:
+      - .:/app
+      - scraps-gems:/gems
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    links:
+      - db
+    environment:
+      DB_DEV: scraps-development
+      DB_HOST: db
+      DB_TEST: scraps-test
+      DB_USERNAME: postgres
+
+  db:
+    image: postgres:11.5
+    volumes:
+      - scraps-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+
+volumes:
+  scraps-data:
+  scraps-gems:

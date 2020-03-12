@@ -4,18 +4,17 @@ default: &default
   host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
+  username: <%= ENV.fetch("DB_USERNAME") %>
 
 development:
   <<: *default
-  database: scraps_dev
-  username: vstar
-  password: password1
+  host: <%= ENV.fetch("DB_HOST") %>
+  database: <%= ENV.fetch("DB_DEV") %>
 
 test:
   <<: *default
-  database: scraps_test
-  username: vstar
-  password: password1
+  host: <%= ENV.fetch("DB_HOST") %>
+  database: <%= ENV.fetch("DB_TEST") %>
 
 production:
   <<: *default
