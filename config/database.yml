@@ -2,20 +2,20 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: localhost
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV["RAILS_MAX_THREADS"] { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  username: <%= ENV.fetch("DB_USERNAME") %>
-  host: <%= ENV.fetch("DB_HOST") %>
-  database: <%= ENV.fetch("DB_DEV") %>
+  username: <%= ENV["DB_USERNAME"] %>
+  host: <%= ENV["DB_HOST"] %>
+  database: <%= ENV["DB_DEV"] %>
 
 test:
   <<: *default
-  username: <%= ENV.fetch("DB_USERNAME") %>
-  host: <%= ENV.fetch("DB_HOST") %>
-  database: <%= ENV.fetch("DB_TEST") %>
+  username: <%= ENV["DB_USERNAME"] %>
+  host: <%= ENV["DB_HOST"] %>
+  database: <%= ENV["DB_TEST"] %>
 
 production:
   <<: *default
