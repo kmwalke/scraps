@@ -6,6 +6,7 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.0-stretch-node
+    executor: docker
     steps:
       - checkout
       - run:
