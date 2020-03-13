@@ -6,12 +6,12 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.7.0
+        environment:
+          RACK_ENV: test
+          RAILS_ENV: test
+          CIRCLE_TEST_REPORTS: test-reports
+          POSTGRES_PASSWORD: password
       - image: circleci/postgres:latest
-    environment:
-      RACK_ENV: test
-      RAILS_ENV: test
-      CIRCLE_TEST_REPORTS: test-reports
-      POSTGRES_PASSWORD: password
     steps:
       - checkout
       - run: sudo apt-get update
@@ -21,18 +21,7 @@ jobs:
       - run: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
       - run:
           name: Database
-          command: |
-            mkdir -p config
-            echo 'test:
-              database: circle_ruby_test
-              adapter: postgresql
-              encoding: unicode
-              pool: 25
-              prepared_statements: false
-              username: root
-              host: localhost
-            ' > config/database.yml
-            bundle exec rake db:create db:schema:load --trace
+          command: bundle exec rake db:setup --trace
       - run:
          name: Tests
          command: bundle exec rspec
