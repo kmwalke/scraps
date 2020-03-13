@@ -16,4 +16,7 @@ ul.board_members {
       color: $color_primary_dark;
     }
   }
+  li:before {
+    content: '' !important;
+  }
 }

@@ -30,10 +30,11 @@
         <%= link_to 'Programs', programs_path, id: :programs, class: active_link?(programs_path) || active_link?(pumpkin_smash_path) || active_link?(garden_path) %>
         <ul class="submenu">
           <li>
-            <%= link_to 'Pumpkin Smash', pumpkin_smash_path, id: :pumpkin_smash %>
+            <%= link_to 'Garden', garden_path, id: :garden %>
           </li>
           <li>
-            <%= link_to 'Garden', garden_path, id: :garden %></li>
+            <%= link_to 'Pumpkin Smash', pumpkin_smash_path, id: :pumpkin_smash %>
+          </li>
         </ul>
       </li>
     </ul>

@@ -89,6 +89,10 @@ html, body {
               list-style: none;
               margin-bottom: 1em;
             }
+
+            li:before {
+              content: '✓';
+            }
           }
         }
 

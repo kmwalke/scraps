@@ -8,6 +8,9 @@ AllCops:
 Layout/ExtraSpacing:
   ForceEqualSignAlignment: true
 
+Layout/LineLength:
+  Max: 120
+
 Style/Documentation:
   Enabled: false
 
@@ -30,9 +33,6 @@ Metrics/CyclomaticComplexity:
 
 Metrics/PerceivedComplexity:
   Max: 10
-
-Metrics/LineLength:
-  Max: 120
 
 Metrics/MethodLength:
   Max: 20
