@@ -5,11 +5,16 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7.0-stretch-node
-    executor: docker
+      - image: circleci/ruby:2.7.0
+      - image: circleci/postgres:latest
     steps:
       - checkout
+      - run: sudo apt-get update
+      - run: sudo apt install postgresql-client
+      - run: mkdir -p tmp/cache $CIRCLE_TEST_REPORTS
+      - run: npm install
+      - run: gem install bundler
+      - run: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
       - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+         name: Tests
+         command: bundle exec rspec
