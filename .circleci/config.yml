@@ -8,14 +8,14 @@ references:
       BUNDLE_RETRY: 3
       BUNDLE_PATH: vendor/bundle
       PGHOST: 127.0.0.1
-      PGUSER: circleci-demo-ruby
+      PGUSER: postgres
       PGPASSWORD: ""
       RAILS_ENV: test
   postgres: &postgres
     image: circleci/postgres:9.5-alpine
     environment:
-      POSTGRES_USER: circleci-demo-ruby
-      POSTGRES_DB: rails_blog_test
+      POSTGRES_USER: postgres
+      POSTGRES_DB: scraps-test
       POSTGRES_PASSWORD: ""
 
 jobs:
