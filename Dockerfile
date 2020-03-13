@@ -1,4 +1,4 @@
-FROM ruby:2.6.5
+FROM ruby:2.7.0
 LABEL maintainer="kentslaymaker@gmail.com"
 
 # Allow for install of the node version we use in production
