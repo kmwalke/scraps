@@ -20,5 +20,19 @@ jobs:
       - run: gem install bundler
       - run: bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
       - run:
+          name: Database
+          command: |
+            mkdir -p config
+            echo 'test:
+              database: circle_ruby_test
+              adapter: postgresql
+              encoding: unicode
+              pool: 25
+              prepared_statements: false
+              username: root
+              host: localhost
+            ' > config/database.yml
+            bundle exec rake db:create db:schema:load --trace
+      - run:
          name: Tests
          command: bundle exec rspec
