@@ -5,7 +5,7 @@ ruby '2.7.0'
 
 gem 'autoprefixer-rails'
 gem 'bcrypt'
-gem 'bootsnap' require: false
+gem 'bootsnap', require: false
 gem 'coffee-rails'
 gem 'pg'
 gem 'puma'
