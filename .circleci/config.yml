@@ -7,6 +7,10 @@ jobs:
     docker:
       - image: circleci/ruby:2.7.0
       - image: circleci/postgres:latest
+    environment:
+      RACK_ENV: test
+      RAILS_ENV: test
+      CIRCLE_TEST_REPORTS: test-reports
     steps:
       - checkout
       - run: sudo apt-get update
