@@ -10,8 +10,9 @@ jobs:
           RACK_ENV: test
           RAILS_ENV: test
           CIRCLE_TEST_REPORTS: test-reports
-          POSTGRES_PASSWORD: password
       - image: circleci/postgres:latest
+        environment:
+          POSTGRES_PASSWORD: password
     steps:
       - checkout
       - run: sudo apt-get update
