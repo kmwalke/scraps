@@ -1,4 +1,5 @@
-@import '_global_variables';
+@import 'global_variables';
+@import 'mixins';
 
 $header-bg-color: $color_primary;
 $header-link-color: $color_secondary_light;
