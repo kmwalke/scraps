@@ -3,13 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
+
 gem 'autoprefixer-rails'
 gem 'bcrypt'
 gem 'bootsnap', require: false
 gem 'coffee-rails'
 gem 'pg'
 gem 'puma'
-gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
 gem 'sassc-rails'
 gem 'turbolinks'
 gem 'uglifier'
