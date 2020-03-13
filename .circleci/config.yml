@@ -11,6 +11,7 @@ jobs:
       RACK_ENV: test
       RAILS_ENV: test
       CIRCLE_TEST_REPORTS: test-reports
+      POSTGRES_PASSWORD: password
     steps:
       - checkout
       - run: sudo apt-get update
